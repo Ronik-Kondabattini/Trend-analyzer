@@ -12,6 +12,8 @@ Content idea generator
 Save ideas + search history
 User dashboard with stats
 Auth system + admin panel
+
+
 🧱 Project Structure
 django_project/
 ├── django_project/        # Core config (settings, URLs)
