@@ -1,62 +1,46 @@
-📈 TrendPulse — Trend Analyzer
+# Trend Analyzer
 
-A Django app that analyzes any topic and instantly returns:
+## Project Overview
+The Trend Analyzer is a powerful tool designed to analyze and visualize trends in different datasets. By utilizing various algorithms and data processing techniques, users can gain insights into patterns and forecasts.
 
-📊 Trend metrics
-🎥 YouTube suggestions
-💡 Content ideas
-✨ Core Features
-Topic analysis with trend score & metrics
-YouTube video suggestions
-Content idea generator
-Save ideas + search history
-User dashboard with stats
-Auth system + admin panel
+## Features
+- Data visualization tools
+- Built-in analysis algorithms
+- User-friendly interface
+- Export results in various formats
 
+## Quick Start Guide
+1. Clone the repository: `git clone https://github.com/Ronik-Kondabattini/Trend-analyzer.git`
+2. Navigate to the directory: `cd Trend-analyzer`
+3. Install dependencies: `npm install`
+4. Start the application: `npm start`
 
-🧱 Project Structure
-django_project/
-├── django_project/        # Core config (settings, URLs)
-├── core/                  # Main app (all logic)
-│   ├── models.py          # DB models
-│   ├── views.py           # App + API views
-│   ├── services.py        # Business logic
-│   ├── forms.py           # Forms
-│   ├── urls_*.py          # Route modules
-│   ├── templates/         # HTML templates
-│   └── static/            # CSS, JS, assets
-├── manage.py
-└── requirements.txt
+## Project Structure
+- `/src`: Contains source code
+- `/public`: Public assets
+- `/docs`: Technical documentation
 
-👉 Everything important lives in core/ (this is what devs care about)
+For detailed documentation, refer to the [Documentation](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs).
 
-🚀 Quick Start
-git clone https://github.com/yourusername/trendpulse.git
-cd trendpulse/django_project
+## Technology Stack
+- Node.js
+- Express
+- MongoDB (for database management)
+- React (for frontend development)
 
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-CREATE DATABASE trendpulse;
-cp .env.example .env
-python manage.py migrate
-python manage.py seed
-python manage.py runserver
+## Main API Routes
+- `GET /api/trends`: Retrieve a list of trends
+- `POST /api/analyze`: Submit data for analysis
+- `GET /api/results/:id`: Retrieve analysis results by ID
 
-👉 http://localhost:8000
+## Development Workflow
+1. Create a new branch for your feature: `git checkout -b feature/your-feature`
+2. Make your changes locally.
+3. Commit your changes: `git commit -m "Add a new feature"`
+4. Push your branch: `git push origin feature/your-feature`
+5. Create a Pull Request on GitHub.
 
-Demo: demo@example.com / password123
-
-🔗 Main Routes
-/dashboard/ → Dashboard
-/api/analyze/ → Analyze topic
-/api/history/ → History
-/api/saved-ideas/ → Saved ideas
-/admin/ → Admin
-🛠️ Stack
-
-Django · MySQL · HTML/CSS/JS
-
-📝 License
-
-MIT
+## Additional Resources
+- [GitHub Repository](https://github.com/Ronik-Kondabattini/Trend-analyzer)
+- [API Documentation](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs/api.md)
+- [User Guide](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs/user-guide.md)
