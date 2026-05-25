@@ -1,46 +1,103 @@
-# Trend Analyzer
+# 📈 TrendPulse — Trend Analyzer
 
-## Project Overview
-The Trend Analyzer is a powerful tool designed to analyze and visualize trends in different datasets. By utilizing various algorithms and data processing techniques, users can gain insights into patterns and forecasts.
+A Django app that analyzes any topic and instantly returns:
 
-## Features
-- Data visualization tools
-- Built-in analysis algorithms
-- User-friendly interface
-- Export results in various formats
+- 📊 Trend metrics
+- 🎥 YouTube suggestions
+- 💡 Content ideas
 
-## Quick Start Guide
-1. Clone the repository: `git clone https://github.com/Ronik-Kondabattini/Trend-analyzer.git`
-2. Navigate to the directory: `cd Trend-analyzer`
-3. Install dependencies: `npm install`
-4. Start the application: `npm start`
+### ✨ Core Features
+- Topic analysis with trend score & metrics
+- YouTube video suggestions
+- Content idea generator
+- Save ideas + search history
+- User dashboard with stats
+- Auth system + admin panel
 
-## Project Structure
-- `/src`: Contains source code
-- `/public`: Public assets
-- `/docs`: Technical documentation
+---
 
-For detailed documentation, refer to the [Documentation](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs).
+## 🧱 Repository Structure
 
-## Technology Stack
-- Node.js
-- Express
-- MongoDB (for database management)
-- React (for frontend development)
+The repository is organized into distinct logical components for clear separation of concerns:
 
-## Main API Routes
-- `GET /api/trends`: Retrieve a list of trends
-- `POST /api/analyze`: Submit data for analysis
-- `GET /api/results/:id`: Retrieve analysis results by ID
+```
+Trend-analyzer/
+├── backend/               # Main Django Application
+│   ├── core/              # Main app (models, views, business logic)
+│   ├── django_project/    # Core config (settings, URLs)
+│   ├── manage.py          # Django management script
+│   └── requirements.txt   # Python dependencies
+├── frontend/              # Frontend code (Placeholder for future decoupled UI)
+├── docs/                  # Project documentation (API, Contributing guidelines)
+├── tests/                 # Automated testing suite
+├── configs/               # Environment & deployment configurations
+├── .gitignore             # Ignored files (including .env)
+├── LICENSE                # MIT License
+└── README.md              # Project overview (this file)
+```
 
-## Development Workflow
-1. Create a new branch for your feature: `git checkout -b feature/your-feature`
-2. Make your changes locally.
-3. Commit your changes: `git commit -m "Add a new feature"`
-4. Push your branch: `git push origin feature/your-feature`
-5. Create a Pull Request on GitHub.
+👉 **Everything important lives in `backend/core/` (this is what devs care about)**
 
-## Additional Resources
-- [GitHub Repository](https://github.com/Ronik-Kondabattini/Trend-analyzer)
-- [API Documentation](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs/api.md)
-- [User Guide](https://github.com/Ronik-Kondabattini/Trend-analyzer/docs/user-guide.md)
+---
+
+## 🚀 Quick Start (Backend)
+
+Follow these steps to run the Django backend locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Ronik-Kondabattini/Trend-analyzer.git
+cd Trend-analyzer/backend
+
+# 2. Set up virtual environment
+python -m venv venv
+# Windows: venv\Scripts\activate
+# Mac/Linux: source venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Set up the database (requires MySQL or compatible DB)
+# Create a database named 'trendpulse' in your MySQL server
+# cp .env.example .env (Ensure you configure your credentials here)
+python manage.py migrate
+python manage.py seed
+
+# 5. Run the development server
+python manage.py runserver
+```
+
+👉 **App URL**: `http://localhost:8000`  
+👉 **Demo Credentials**: `demo@example.com` / `password123`
+
+---
+
+## 🔗 Main Routes
+
+- `/dashboard/` → User Dashboard
+- `/api/analyze/` → Analyze topic
+- `/api/history/` → Search History
+- `/api/saved-ideas/` → Saved Content Ideas
+- `/admin/` → Admin Panel
+
+---
+
+## 🛠️ Technology Stack
+
+- **Backend**: Django, Python
+- **Database**: MySQL
+- **Frontend**: HTML, CSS, JavaScript (Currently bundled via Django templates)
+
+---
+
+## 📚 Documentation
+
+Detailed documentation is available in the `docs/` directory:
+- [API Documentation](docs/API_DOCUMENTATION.md)
+- [Contributing Guidelines](docs/CONTRIBUTING.md)
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
